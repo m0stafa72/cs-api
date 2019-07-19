@@ -8,6 +8,7 @@ class slider extends Model
 {
     //
     protected $fillable = [
+    	'key',
     	'title',
 		'description',
 		'button',

@@ -1,6 +1,7 @@
 
 
 Vue.component('slider_table', require('./components/table.vue').default);
+Vue.component('new_slider', require('./components/new_slider.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

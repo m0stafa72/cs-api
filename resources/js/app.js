@@ -6,5 +6,18 @@
 
 require('./bootstrap');
 
+// import Send from './send';
+
+
+
 window.Vue = require('vue');
+
+
+// window.send = require('./send');
+
+// Vue.use(Send);
+
+
+Vue.component('EnableAndDisable',require('./models/Enable_and_disable.vue').default);
+Vue.component('Delete',require('./models/Delete.vue').default);
 

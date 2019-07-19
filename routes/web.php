@@ -26,7 +26,13 @@ Route::middleware(['web', 'Admin'])->group(function () {
     
     Route::get('/admin','HomeController@index');
 
+    /// all admin/EnableAndDisable in database
+    Route::post('/admin/EnableAndDisable','Enable_and_disableController@EnableAndDisable');
+    /// all admin/Delete in database
+    Route::post('/admin/delete','DeleteController@distore');
+
     // show and edit slider
     Route::get('/admin/slider','SliderController@index');
+    Route::post('/admin/slider/new','SliderController@store');
 
 });
