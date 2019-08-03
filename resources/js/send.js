@@ -1,3 +1,7 @@
+
+const BaseUrl = document.head.querySelector('meta[name="base-url"]').content;
+window.axios.defaults.baseURL = BaseUrl;
+
 class Send {
    
 

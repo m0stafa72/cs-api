@@ -1368,7 +1368,7 @@ var render = function() {
                           ],
                           staticClass: "form-control",
                           attrs: {
-                            type: "password",
+                            type: "text",
                             id: "exampleInputPassword1",
                             placeholder: " مثلا : ادامه مطلب"
                           },
@@ -1402,7 +1402,7 @@ var render = function() {
                           ],
                           staticClass: "form-control",
                           attrs: {
-                            type: "password",
+                            type: "text",
                             id: "exampleInputPassword2",
                             placeholder: "لینک دکمه را وارد کنید"
                           },
@@ -1822,6 +1822,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var BaseUrl = document.head.querySelector('meta[name="base-url"]').content;
+window.axios.defaults.baseURL = BaseUrl;
 
 var Send =
 /*#__PURE__*/

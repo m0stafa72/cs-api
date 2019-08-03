@@ -15383,8 +15383,6 @@ Vue.component('Delete', __webpack_require__(/*! ./models/Delete.vue */ "./resour
  */
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-var BaseUrl = document.head.querySelector('meta[name="base-url"]').content;
-window.axios.defaults.baseURL = BaseUrl;
 /**
  * Next we will register the CSRF Token as a common header with Axios so that
  * all outgoing HTTP requests automatically have it attached. This is just
@@ -15574,6 +15572,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var BaseUrl = document.head.querySelector('meta[name="base-url"]').content;
+window.axios.defaults.baseURL = BaseUrl;
 
 var Send =
 /*#__PURE__*/

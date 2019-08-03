@@ -72,7 +72,7 @@
                     <div class="form-group">
                         <label for="exampleInputPassword1">متن دکمه</label>
                         <input
-                            type="password"
+                            type="text"
                             class="form-control"
                             v-model="button"
                             id="exampleInputPassword1"
@@ -83,7 +83,7 @@
                     <div class="form-group">
                         <label for="exampleInputPassword2">لینک دکمه</label>
                         <input
-                            type="password"
+                            type="text"
                             class="form-control"
                             v-model="link"
                             id="exampleInputPassword2"

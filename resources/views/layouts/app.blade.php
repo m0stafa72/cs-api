@@ -128,15 +128,25 @@
                           </li>
                         </ul>
                       </li>
-                      <li class="nav-item">
-                        <a href="{{ url('/admin/slider') }}" class="nav-link {{ request()->is('admin/slider*') ? 'active' : '' }}">
-                          <i class="nav-icon fa fa-th"></i>
-                          <p>
-                            اسلایدر
-                            <i class="fa fa-angle-left right"></i>
-                          </p>
-                        </a>
-                      </li>
+                        <li class="nav-item">
+                            <a href="{{ url('/admin/users') }}" class="nav-link {{ request()->is('admin/users*') ? 'active' : '' }}">
+                              <i class="nav-icon fa fa-user"></i>
+                              <p>
+                                کاربران
+                                <i class="fa fa-angle-left right"></i>
+                              </p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ url('/admin/slider') }}" class="nav-link {{ request()->is('admin/slider*') ? 'active' : '' }}">
+                              <i class="nav-icon fa fa-th"></i>
+                              <p>
+                                اسلایدر
+                                <i class="fa fa-angle-left right"></i>
+                              </p>
+                            </a>
+                        </li>
                       
                       
                     </ul>

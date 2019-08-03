@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
+use Str;
+
 class RegisterController extends Controller
 {
     /*
@@ -40,6 +42,29 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
+
+    //// create a rendom key
+    protected function GenrateToken() {
+
+        $min=35;
+        $max=45;
+        $random = rand($min,$max);
+
+        $token = Str::random($random);
+
+        $unique_slider_key = User::where('key' , '=' , $token)->first();
+
+            if ($unique_slider_key) {
+                # code...
+               return $this->GenrateToken();
+            } else {
+                return $token;
+            }    
+        
+    }
+    // create a rendom key
+
+
     /**
      * Get a validator for an incoming registration request.
      *
@@ -67,6 +92,7 @@ class RegisterController extends Controller
         return User::create([
             'name' => $data['name'],
             'lastname' => $data['lastname'],
+            'key' => $this->GenrateToken(),
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
